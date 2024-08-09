@@ -23,6 +23,8 @@ time_series = pynwb.TimeSeries(
 )
 nwb.add_acquisition(time_series)
 
-path = 'non-consolidated.nwb.zarr'
+
+consolidate_metadata = False
+path = f'{"" if consolidate_metadata else "non-"}consolidated.nwb.zarr'
 with hdmf_zarr.NWBZarrIO(path, 'w') as io:
-    io.write(nwb)    
+    io.write(nwb, consolidate_metadata=consolidate_metadata)    
