@@ -1,0 +1,7 @@
+{
+    "comments": "no comments",
+    "description": "an example time series",
+    "namespace": "core",
+    "neurodata_type": "TimeSeries",
+    "object_id": "668951be-611c-4984-82a1-dec31b55b9af"
+}
